@@ -1,0 +1,122 @@
+html,body {
+  margin: 0 0 1px;
+  text-align:center;
+  height:100%;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+
+}
+#wrapper {
+	width:750px;
+	margin:50px auto 0 auto;
+	position: relative;
+    z-index:1;
+    text-align:left;
+}
+#main {
+	width:340px;
+	margin:20px auto 0;
+    text-align:center;
+    position: relative;
+    z-index:1;
+}
+
+h1 {
+	font-family: 'Raleway', serif;
+    font-size: 50px;
+    color:#0a324b;
+    border-bottom:1px solid #0a324b;
+    cursor:pointer;
+}
+h2 {
+	font-family: 'Raleway', serif;
+    font-size: 18px;
+    color:#236086;
+    float:right;
+    margin-top:-32px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+ul {
+	text-align:center;
+	list-style:none;
+}
+li {
+	margin-top:10px;
+	}
+.hide{
+	display:none;
+}
+#content {
+	width:600px;
+	margin:0 auto 0;
+    text-align:center;
+    position: relative;
+    z-index:1;
+    border-left:1px solid #236086;
+    border-right:1px solid #236086;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#about , #education , #experience , #portfolio , #skills ,#contact-me {
+	font-family: 'Wire one', serif;
+    font-size: 40px;
+    color:#236086;
+	border-bottom:1px solid #0a324b;
+	cursor:pointer;
+	text-align:center;
+	-moz-user-select: none;
+    -khtml-user-select: none;
+    cursor:pointer;
+	}
+
+#about1 , #education1 , #experience1 , #portfolio1 , #skills1 , #contact-me1
+ {
+	font-family: arial;
+	padding:10px 37px 10px 0;
+	font-size:14px;
+	text-align:left;
+}
+
+
+/*--------------------------------------------------------------------------------------*/
+#accordion-slider-wrap{
+}
+ul#accordion-slider{
+ margin:5px auto 0;
+ padding: 0 0 10px 0;
+ list-style: none;
+ position: relative;
+}
+ul#accordion-slider li{
+ display: block;
+ overflow: hidden;
+ padding: 0;
+ float: left;
+ width: 80px;
+ height: 220px;
+}
+/*--------------------------------------------------------------------------------------*/
+
+
+#container {
+	width: 600px;
+	margin:50px auto 0 auto;
+	position:relative;
+	text-align:center;
+	z-index:2;
+}
+/*--------------------------------------------------------------------------------------*/
+#superbgimage {
+	display: none;
+	background: #fff center center no-repeat;
+	z-index:-1;
+}
+#superbgimage img {
+	image-rendering: optimizeQuality;
+	-ms-interpolation-mode: bicubic;
+	z-index:-1;
+}

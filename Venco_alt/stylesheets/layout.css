@@ -1,0 +1,1418 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+* {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	}
+
+html, body{
+	background:#000;
+	color:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+
+}
+
+div.headerTop{
+	margin:0;
+	padding:0;
+	float:left;
+}
+h2{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	color:#ffed00;
+	margin:0 0 10px 0;
+	padding:0;
+	line-height:19px;
+}
+p{
+	font-size:12px;
+	line-height:20px;
+	clear:left;
+}
+div#logo_tl{
+	float:left;	
+	width:265px;
+	height:90px;
+	background:url(../images/logo_tablet_landscape.jpg) left top no-repeat;	
+}
+div#header_candy_tl{
+	float:left;	
+	margin-left:-40px;
+	width:203px;
+	height:91px;
+	background:url(../images/header_candy.png) left top no-repeat;		
+}
+img{
+	border:none;
+	float:left;
+}
+nav{
+	margin-top:20px;
+	float:right;
+	margin-left:-10px;
+}
+nav ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	background:url(../images/nav_repeat.jpg) top left repeat-x;
+	height:50px;
+	float:right;
+}
+nav ul li{
+	float:left;
+	margin:0;
+	padding:14px 23px;	
+	background:url(../images/nav_border_left.jpg) top left no-repeat;
+}
+nav ul li a{
+	font-size:0.75em;
+	font-weight:bold;
+	line-height:1.9em;
+	text-decoration:none;
+	float:left;
+	height:22px;
+	background-position:0 0;
+}
+
+nav ul li#home a{
+	background:url(../images/nav_home.png) no-repeat;	
+	padding-left:27px;
+	color:#8c8c8c;	
+}
+nav ul li#topfilms a{
+	background:url(../images/nav_topfilms.png) no-repeat;	
+	padding-left:24px;
+	color:#8c8c8c;	
+}
+nav ul li#smaken a{
+	background:url(../images/nav_smaken.png) no-repeat;
+	padding-left:18px;
+	color:#8c8c8c;	
+}
+nav ul li#faq a{
+	background:url(../images/nav_faq.png) no-repeat;
+	padding-left:26px;
+	color:#8c8c8c;	
+}
+nav ul li#home a:hover, nav ul li#home a.selected,
+nav ul li#topfilms a:hover, nav ul li#topfilms a.selected,
+nav ul li#smaken a:hover, nav ul li#smaken a.selected,
+nav ul li#faq a:hover, nav ul li#faq a.selected{
+	color:#ffed00;
+	background-position:0 -60px;
+}
+div.main{
+	background:url(../images/main_header_tl.jpg) left top no-repeat;
+	width:960px;
+	height:470px;
+	float:left;
+	position:relative;
+}
+div.social{
+	width:145px;
+	height:25px;
+	background:url(../images/sharingBg.png) left bottom repeat-x;
+	float:left;
+	bottom:30px;
+	margin-left:24px;
+	position:absolute;
+}
+div.social span{
+	margin:4px;
+	float:left;	
+}
+div#contentBg{
+	width:100%;
+	background:url(../images/contentBgRepeat_tl.jpg) left top repeat-x;
+	float:left;
+	height:491px;
+	position:absolute;
+}
+div.content{
+	background:url(../images/contentBg_tl.jpg) center top no-repeat;	
+	height:491px;
+	position:relative;
+}
+
+
+
+div.contentPacks{
+	width:450px;	
+}
+div.packs #packImg{
+	margin:22px 0 0 -4px;
+	height:209px;
+	width:350px;
+	float:left;
+	background:url(../images/packs_tl.png) center top no-repeat;		
+}
+div.nieuw img{
+	margin:0 0 0 9px;	
+}
+div.packs img{
+	margin:22px 0 0 -4px;	
+}
+div.packsText{
+	clear:left;
+	float:left;
+	margin: -16px 0 0 32px;
+}
+div.terms{
+	position:relative;
+	z-index:2;
+}
+div.terms img, div.packsText span img{
+	margin:-6px 0 0 1px;
+}
+span#movieMax{
+	float:right;	
+}
+div.youtube{
+	position:absolute;
+	float:right;
+	right:0;
+	top:30px;
+}
+div.youtube span{
+	position:absolute;
+	clear:both;
+	float:left;
+	padding-top:9px;
+}
+div.beljik-btn{
+	margin-top:90px;
+}
+div#fbOuter{
+	width:100%;
+	position:absolute;
+	margin-top:368px;
+	
+}
+div.fb{
+	position:relative;
+	z-index:1;
+
+}
+div.fb a{
+	float:right;
+}
+div#footer{
+	position:relative;
+	margin-top:-30px;
+	text-align:center;
+	font-size:9px;
+	color:#474747;
+}
+div#footer a:hover{
+	color:#fff;	
+}
+
+
+/* ------------------feed  -----------*/
+div#feed-cont {
+	background: url('../images/feed-cont-bg.png');
+	height: 600px;
+}
+.feed {
+	width:450px;
+	height:540px;
+	background:white;
+	margin-top:30px;
+	margin-left:30px;
+	-moz-box-shadow: 0px 0px 7px #000000;
+	-webkit-box-shadow: 0px 0px 7px #000000;
+	box-shadow: 0px 0px 7px #000000;
+	padding:0 10px 0 10px;
+}
+html.ie6 div#feed-cont,
+html.ie7 div#feed-cont,
+html.ie8 div#feed-cont{
+   zoom: 1;
+   filter: progid:DXImageTransform.Microsoft.DropShadow(OffX=0, OffY=0, Color=#000000);
+}
+div#feeds {
+	color:black;
+	margin-bottom:5px;
+	height:420px;
+	overflow-y:scroll;
+}
+div#feed-head {
+	margin-bottom:5px;
+}
+.feed-head {
+	color:black;
+	margin:0;
+	float:left;
+	margin-left:15px;
+	padding-top:28px;
+	text-align:left;
+}
+.feed-head-img {
+	float:right;
+	margin: 28px 15px 0 0;
+}
+
+/* ------------------feed left -----------*/
+#feed-box {
+	background:black;
+	width:120px;
+	height:85px;
+	margin-left:15px;
+	margin-top:18px;
+	float:left;
+	cursor:pointer;
+	line-height:14px;
+}
+#feed-title {
+	color:#cccccc;
+	font-family:'arial';
+	font-size:11px;
+	line-height:14px;
+	margin-top:3px;
+	font-weight:bold;
+}
+#feed-category {
+	color:#999999;
+	font-family:'arial';
+	font-size:10px;
+	line-height:12px;
+	
+}
+#feed-image {
+	width:50px;
+	height:75px;
+	margin:3px 5px 3px 3px;
+}
+
+#feed-box:hover {
+	outline:2px solid #e40620;
+}
+#feed-box:hover #feed-title {
+	color:#ffed00;
+}
+#feed-box:hover #feed-category {
+	color:#ffffff;
+}
+/* ------------------feed 2 right -----------*/
+#feeds2 {
+	height:540px;
+	float:left;
+	margin-left:20px;
+	margin-top:28px;
+}
+
+#feed-video {
+	background:black;
+
+}
+#feed-image2 {
+	margin-top:20px;
+}
+#feed-title2 {
+	float:left;
+	color:black;
+	margin-left:20px;
+	margin-top:20px;
+}
+#feed-content {
+	color:#666666;
+	width:320px;
+	float:left;
+	font-size:12px;
+	margin-left:120px;
+	margin-top:-116px;
+	height:120px;
+	text-align:left;
+	overflow:hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+div.huur-btn {
+	position:relative;
+	left:20px;
+	top:-80px;
+}
+#pagination-contianer{width:100%;height:auto;padding:10px 0 ;float:left;}
+	ul.page-pagination{ list-style:none;}
+	.page-pagination li{ display:inline; }
+	.page-pagination li a{
+	color:#556074; 
+	float:left;
+	}
+.page-pagination li a:hover{
+	border:1px solid #898989;	
+}
+.page-pagination li a:hover{
+	border:1px solid #898989;
+	
+}
+.page-pagination li a:active,.page-pagination li.active a{
+	background: #ebebeb;
+}
+a.prev1{
+   	background:url('../images/feed-left.png') no-repeat;
+   	font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 30px;
+	height: 40px;
+	display: block;
+}
+a.next1{
+   	background:url('../images/feed-right.png') no-repeat;
+   	font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 30px;
+	height: 40px;
+	display: block;
+}
+
+
+/* smaken */
+div#contentBg-smaken{
+	width:100%;
+	background:url(../images/smaken-cont-bg.png) center 175px repeat-x,
+				url(../images/contentBgRepeat_tl-smaken.jpg) left -100px repeat-x;
+	float:left;
+	height:743px;
+	position:absolute;
+}
+div.content-smaken {
+	background: url(../images/smaken-slider-bg.png) center 175px no-repeat,
+				url(../images/contentBg_t.jpg) center top no-repeat;	
+	height:471px;
+	position:relative;
+}
+ul#slider {
+	margin-top:125px;
+	margin-bottom:200px;
+
+}
+a.prev{
+   	background:url('../images/btn-prev.png') no-repeat;
+   	font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 30px;
+	height: 40px;
+	display: block;
+	position:absolute;
+	left:10px;
+	margin-top:210px;
+}
+a.next{
+   	background:url('../images/btn-next.png') no-repeat;
+   	font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+    width: 30px;
+	height: 40px;
+	display: block;
+	
+	position:absolute;
+	right:10px;
+	margin-top:210px;
+}
+div.smaken {
+	margin: 20px auto;
+	float:none;
+}
+.smaken-h2 {
+	text-align:center;
+}
+div.smaken p {
+	text-align: left;
+	margin-left:0;
+	margin-bottom:0px;
+}
+.smaken_btn1 {
+	margin-top:30px;
+}
+.smaken_btn2 {
+	margin:30px 0 0 20px;
+}
+div#footer-smaken{
+	position:relative;
+	margin-top:27px;
+	text-align:center;
+	font-size:9px;
+	color:#474747;
+}
+div#footer-smaken a:hover{
+	color:#fff;	
+}
+div.center {
+	margin: 0  0 0 250px;
+	
+}
+
+
+/* faq */
+div#contentBg-faq{
+	width:100%;
+	background:url(../images/contentBgRepeat_tl-faq.jpg) left top repeat-x;
+	float:left;
+	height:px;
+	position:absolute;
+}
+.faq-bg {
+	background:	url(../images/faq-bg.png) center center no-repeat;
+	padding-bottom:15px;
+}
+h2 {
+	margin-top: 30px;
+	text-align: center;
+}
+p {
+	text-align: left;
+}
+a.hier {
+	color: #e40620;
+	text-decoration: underline;
+}
+.tikkels-left {
+	margin-left: -30px;
+	float: left;
+}
+.tikkels-right {
+	margin-right: -30px;
+	float: right;
+}
+.faq-iframe {
+	width: 620px;
+	height: 275px;
+	background:#ffffff;
+}
+div#footer-faq{
+	position:relative;
+	margin-top:15px;
+	text-align:center;
+	font-size:9px;
+	color:#474747;
+}
+div#footer-faq a:hover{
+	color:#fff;	
+}
+
+
+/* movies */
+.movies-left {
+	text-align:left;
+}
+
+/* others */
+.right {
+	float:right;
+}
+.padding-smaken {
+	margin-top:-120px;
+}
+/* roundabout */
+
+   .roundabout-holder {
+      list-style: none;
+      padding: 0;
+      margin:100px auto;
+      
+      height: 5em;
+      width: 20em;
+   }
+   .roundabout-moveable-item {
+      height: 15em;
+      width: 15em;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      padding:0 0 0 0px;
+   }
+   .roundabout-in-focus {
+      cursor: auto;
+
+   }
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {
+
+		div#header_candy_tl{
+			float:right;	
+			margin:5px 0 20px 0px;
+			margin-right:160px;
+		}
+		nav{
+			margin:0;
+			float:left;
+			width:100%;
+		}
+		nav ul{
+			float:left;
+			width:100%;
+		}
+		nav ul li{			
+			width:25%;
+			padding:14px 0;			
+		}		
+		nav ul li#home a{		
+			margin-left:65px;
+		}
+		nav ul li#topfilms a{			
+			margin-left:32px;
+		}
+		nav ul li#smaken a{		
+			margin-left:37px;
+		}
+		nav ul li#faq a{
+			margin-left:66px;
+		}
+		
+		div#header_candy_tl{
+			margin-top:0px;
+			margin-bottom:-25px;
+		}
+		div.main{
+			background:url(../images/main_header_tp.jpg) left top no-repeat;
+			width:768px;
+			height:350px;
+			float:left;
+		}
+		div.packs img, div.packs #packImg{
+			margin:-17px 0 0 55px;
+		}
+		div.contentPacks{
+			width:400px;	
+		}
+		div.terms img{
+			margin:5px 0 0 25px;
+		}
+		span#movieMax{
+			margin-top:5px;	
+		}
+		div.packsText{
+			margin-top:10px;
+			width:380px;
+		}
+		div.packsText span img{
+			margin:0 0 0 30px;
+		}
+		div.packsText h2{
+			font-size:18px;	
+		}
+		div.packsText h2 span{
+			clear:both;
+			float:left;
+			margin-bottom:8px;
+		}
+		div#fbOuter{
+			margin:-460px 0 0 -30px;
+		}
+		div.youtube {
+			top:0;
+
+		}
+		div.beljik-btn{
+			margin-top:20px;
+		}
+		div.youtube iframe{
+			width:318px;
+			height:180px;			
+		}
+		div#contentBg{
+			background:none;
+		}
+		div.content{
+			background:url(../images/contentBg_tp.jpg) center 10px no-repeat;	
+			height:584px;
+			position:relative;
+		}
+		div#footer{
+			margin-top:-34px;
+		}
+		div.center {
+			margin: 0  0 0 200px;
+	
+		}
+
+					/* faq */
+			div#contentBg-faq{
+				width:100%;
+				background:url(../images/contentBgRepeat_tl-faq.jpg) left bottom repeat-x;
+				float:left;
+				height:px;
+				position:absolute;
+			}
+			.faq-bg {
+				background:	url(../images/faq-bg.png) center top no-repeat;
+			}
+			h2 {
+				margin-top: 30px;
+				margin-left:25px;
+				text-align: left;
+			}
+			p {
+				text-align: left;
+				margin-left:25px;
+			}
+			a.hier {
+				color: #e40620;
+				text-decoration: underline;
+			}
+			.tikkels-left {
+				margin-top: -70px;
+				margin-right: 30px;
+				float: right;
+			}
+			.tikkels-right {
+				margin-top: 0px;
+				margin-right: 30px;
+				float: right;
+			}
+			.faq-iframe {
+				width: 620px;
+				height: 275px;
+				margin-left:25px;
+				
+			}
+			div#footer-faq{
+				position:relative;
+				margin-top:-15px;
+				margin-bottom:20px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-faq a:hover{
+				color:#fff;	
+			}
+
+
+			/* smaken */
+			div#contentBg-smaken{
+				width:100%;
+				background:url(../images/smaken-cont-bg.png) center 175px repeat-x,
+							url(../images/contentBgRepeat_tp-smaken.jpg) left top repeat-x;
+				float:left;
+				height:863px;
+				position:absolute;
+			}
+			div.content-smaken {
+				background: url(../images/smaken-slider-bg.png) center 175px no-repeat,
+							url(../images/contentBg_t.jpg) center top no-repeat;	
+				height:471px;
+				position:relative;
+			}
+
+			div.smaken {
+				margin: 100px auto;
+			}
+			div.smaken h2 {
+				text-align: left;
+				margin-left:0;
+			}
+			div.smaken p {
+				text-align: left;
+				margin-left:0;
+				margin-bottom:0px;
+			}
+			.smaken_btn1 {
+				margin-top:30px;
+			}
+			.smaken_btn2 {
+				margin:30px 0 0 20px;
+			}
+			.fb-smaken {
+				margin-top:0px;
+			}
+			div#footer-smaken{
+				position:relative;
+				margin-top:-30px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-smaken a:hover{
+				color:#fff;	
+			}
+			.padding-smaken {
+				
+				margin:-80px 210px 0 0px;
+			}
+			
+	}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		h2.home-h2 {
+			text-align:left;
+			margin:-5px 0 0 0px;
+		}
+		p.home-p {
+			text-align:left;
+			width:420px;
+			margin-left:0px;
+			margin-top:10px;
+		}
+		div#logo_tl{
+			float:left;	
+			width:204px;
+			height:70px;
+			background:url(../images/logo_mobile_landscape.jpg) left top no-repeat;	
+		}
+		div#logo_tl h1 a {
+			
+		}
+		div#header_candy_tl{
+			float:left;	
+			margin:0 0 0 -7px;
+			width:136px;
+			height:70px;
+			background:url(../images/header_candy_mobile.png) left top no-repeat;		
+		}
+		nav ul li{			
+			width:25%;
+			padding:10px 0;			
+		}
+		div.main{
+			background:url(../images/main_header_mobile_tl.jpg) left top no-repeat;
+			width:480px;
+			height:315px;
+			float:left;
+		}
+		div#fbOuter{
+			margin:-415px 0 0 -30px;
+		}
+		div.nieuw img{
+			margin:0;	
+		}
+		nav ul li a{
+			line-height:5.25em;
+		}
+		nav ul li#home a{
+			/*background:url(../images/nav_home.png) top center no-repeat;*/	
+			background-position:center 0;
+			margin:0 0 0 44px;
+			padding:0;
+		}
+		nav ul li#topfilms a{
+			/*background:url(../images/nav_topfilms.png) top center no-repeat;*/	
+			background-position:center 0;
+			margin:0 0 0 8px;
+			padding:0;
+		}
+		nav ul li#smaken a{
+			/*background:url(../images/nav_smaken.png) top center no-repeat;*/
+			background-position:center 0;
+			margin:0 0 0 11px;
+			padding:0;
+		}
+		nav ul li#faq a{
+			/*background:url(../images/nav_faq.png) top center no-repeat;*/
+			background-position:center 0;
+			margin:0 0 0 46px;
+			padding:0;
+		}
+		nav ul li#home a:hover, nav ul li#home a.selected,
+		nav ul li#topfilms a:hover, nav ul li#topfilms a.selected,
+		nav ul li#smaken a:hover, nav ul li#smaken a.selected,
+		nav ul li#faq a:hover, nav ul li#faq a.selected{
+			background-position:center -60px;
+		}
+		div.packs #packImg{
+			margin:28px 0 0 -4px;
+			height:209px;
+			width:350px;
+			float:left;
+			background:url(../images/packs_ml.png) center top no-repeat;		
+		}
+		div.packs img{
+			margin:-17px 0 0 55px;
+		}
+		div.contentPacks{
+			width:448px;	
+		}
+		div.terms img{
+			margin:-10px 0 0 1px;
+		}
+		div.packsText{
+			margin-top:-45px;
+			padding-bottom:30px;
+			width:420px;
+		}
+		div.packsText span img{
+			margin:0 0 0 30px;
+		}
+		span#movieMax{
+			margin-top:-10px;
+		}
+		div.packsText h2{
+			font-size:17px;	
+		}
+		div.packsText h2 span{
+			clear:none;
+			float:none;
+			margin-bottom:8px;
+		}
+		div#contentBg{
+			background:url(../images/contentBgRepeat_ml.jpg) center bottom repeat-x;
+			height:auto;
+		}
+		div.content{
+			background:url(../images/packs_bg_ml.jpg) center top no-repeat;	
+			height:700px;
+			position:relative;
+		}
+		div.youtube{
+			clear:both;
+			float:left;
+			position:relative;
+			
+		}
+		div.youtube iframe{
+			width:480px;
+			height:270px;			
+		}
+		div.youtube span {
+			margin-left: 30px;
+		}
+		div.beljik-btn{
+			margin-left:30px;
+		}
+		div#footer{
+			height:30px;
+			margin-top:40px;
+		}
+		div.center {
+			margin-left:0px;
+		}
+
+			/* faq */
+			div#contentBg-faq{
+				width:100%;
+				background:url(../images/contentBgRepeat_tl-faq.jpg) left bottom repeat-x;
+				float:left;
+				height:px;
+				position:absolute;
+			}
+			.faq-bg {
+				background:	url(../images/faq-bg-vertical.png) center -300px no-repeat;
+						}
+			h2 {
+				margin-top: 30px;
+				margin-left:25px;
+				text-align: left;
+			}
+			p {
+				text-align: left;
+				margin-left:25px;
+				width:240px;
+			}
+			a.hier {
+				color: #e40620;
+				text-decoration: underline;
+			}
+			.tikkels-left {
+				margin-top: -70px;
+				margin-right: 30px;
+				float: right;
+			}
+			.tikkels-right {
+				margin-top: 0px;
+				margin-right: 30px;
+				float: right;
+			}
+			.faq-iframe {
+				width: 440px;
+				height:308px;
+				margin-left:25px;
+				
+			}
+			div#footer-faq{
+				position:relative;
+				margin-top:-15px;
+				margin-bottom:20px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-faq a:hover{
+				color:#fff;	
+			}
+
+
+			/* smaken */
+			div#contentBg-smaken{
+				width:100%;
+				background:url(../images/smaken-cont-bg.png) center 85px repeat-x,
+							url(../images/contentBgRepeat_tp-smaken.jpg) left -180px repeat-x;
+				float:left;
+				height:683px;
+				position:absolute;
+			}
+			div.content-smaken {
+				background: url(../images/smaken-cont-bg.png) center 85px no-repeat,
+							url(../images/contentBg_t.jpg) center top no-repeat;	
+				height:471px;
+				position:relative;
+			}
+
+			div.smaken {
+				
+				margin: 50px auto;
+			}
+			div.smaken h2 {
+				text-align: center;
+				margin-left:30px;
+				width:420px;
+			}
+			div.smaken p {
+				text-align: center;
+				width:420px;
+				margin-left:30px;
+				margin-bottom:0px;
+			}
+			.smaken_btn1 {
+				margin-top:30px;
+				margin-left:80px;
+			}
+			.smaken_btn2 {
+				margin:30px 0 0 20px;
+			}
+			.fb-smaken {
+				margin-top:0px;
+				margin-left:30px;
+			}
+			div#footer-smaken{
+				position:relative;
+				margin-top:110px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-smaken a:hover{
+				color:#fff;	
+			}
+			.padding-smaken {
+				float:right;
+				margin:30px 20px 0 0px;
+			}
+			div.slider{
+				margin-top:0px;
+			}
+			ul#slider {
+				margin: 125px 0 100px 110px;
+				
+			}
+			ul#slider li img {
+				height: 10em;
+			    width: 10em;
+			}
+			
+			.roundabout-moveable-item {
+				height: 5em;
+			    width: 5em;
+			}
+			a.prev{
+				position:absolute;
+				margin-left:-10px;
+				margin-top:120px;
+			}
+			 a.next{
+			 	position:absolute;
+			 	margin-right:-10px;
+			 	margin-top:120px;
+			}
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		h2.home-h2 {
+			text-align:left;
+			margin:-5px 0 0 0px;
+		}
+		p.home-p {
+			text-align:left;
+			width:260px;
+			margin-left:0px;
+			margin-top:10px;
+		}
+		div#logo_tl{
+			float:left;	
+			width:204px;
+			height:70px;
+			background:url(../images/logo_mobile_landscape.jpg) left top no-repeat;	
+		}
+		div#header_candy_tl{
+			float:right;	
+			margin:0 0 0 0px;
+			width:116px;
+			height:70px;
+			background:url(../images/header_candy_mp.png) left top no-repeat;		
+		}
+		nav ul li{			
+			width:25%;
+			padding:10px 0;			
+		}
+		div.main{
+			background:url(../images/main_header_mp.jpg) left top no-repeat;
+			width:320px;
+			height:250px;
+			float:left;
+		}
+		
+		div.nieuw img{
+			margin:0;	
+		}
+		nav ul{
+			background:url(../images/nav_repeat_70.jpg) top left repeat-x;
+			height:70px;			
+		}
+		nav ul li{			
+			padding:10px 0;	
+			background:url(../images/nav_border_left_70.jpg) top left no-repeat;
+		}
+		nav ul li a div{
+			line-height:1em;
+			text-align:center;			
+		}
+		nav ul li a{
+			line-height:5.25em;				
+		}
+		nav ul li#home a{
+			background-position:center 0;
+			margin:0 0 0 23px;
+			padding:24px 0 0 0;
+		}
+		nav ul li#topfilms a{			
+			background-position:center 0;
+			margin:0 0 0 0px;
+			padding:24px 0 0 0;
+		}		
+		nav ul li#smaken a{
+			background-position:center 0;
+			margin:0 0 0 1px;
+			padding:24px 0 0 0;
+		}
+		nav ul li#faq a{		
+			background-position:center 0;
+			margin:0 0 0 28px;
+			padding:24px 0 0 0;
+		}
+		nav ul li#home a:hover, nav ul li#home a.selected,
+		nav ul li#topfilms a:hover, nav ul li#topfilms a.selected,
+		nav ul li#smaken a:hover, nav ul li#smaken a.selected,
+		nav ul li#faq a:hover, nav ul li#faq a.selected{
+			background-position:center -60px;
+		}
+		div.social{			
+			bottom:10px;
+			margin-left:5px;			
+		}
+		div.packs #packImg{
+			margin:-25px 0 0 32px;
+			height:172px;
+			width:252px;
+			float:left;
+			background:url(../images/packs_mp.png) center top no-repeat;		
+		}
+		div.packs img{
+			margin:-17px 0 0 55px;
+		}
+		div.contentPacks{
+			width:300px;	
+		}
+		div.terms img{
+			margin:0px 0 0 1px;
+		}
+		div.packsText{
+			margin:-35px 0 0 30px;
+			padding-bottom:30px;
+			width:260px;
+		}
+		div.packsText span img{
+			margin:0 0 0 30px;
+		}
+		span#movieMax{
+			margin-top:-36px;
+		}
+		div.packsText h2{
+			font-size:13px;
+		}
+		div.packsText h2 span{
+			clear:both;
+			float:left;
+			margin-bottom:8px;
+		}
+		div#contentBg{
+			background:url(../images/contentBgRepeat_ml.jpg) center bottom repeat-x;
+			height:auto;
+		}
+		div.content{
+			background:url(../images/packs_bg_mp.jpg) center top no-repeat;	
+			height:740px;
+			position:relative;
+		}
+		div.youtube{
+			clear:both;
+			float:left;
+			position:relative;
+			
+		}
+		div.youtube iframe{
+			width:320px;
+			height:180px;			
+		}
+		div.youtube span {
+			margin-left: 10px;
+		}
+		div.beljik-btn{
+			margin-left:30px;
+		}
+		div#fbOuter{
+			margin:750px 0 0 -30px;
+			float:none;
+		}
+		div#footer{
+			height:30px;
+			margin-top:60px;			
+		}
+		div.center {
+			margin-left:0px;
+		}
+		/* faq */
+			div#contentBg-faq{
+				width:100%;
+				background:url(../images/contentBgRepeat_tl-faq.jpg) left bottom repeat-x;
+				float:left;
+				height:px;
+				position:absolute;
+			}
+			.faq-bg {
+				background:	url(../images/faq-bg-vertical.png) center top no-repeat;
+				
+			}
+			h2 {
+				margin-top: 30px;
+				margin-left:25px;
+				text-align: left;
+			}
+			p {
+				text-align: left;
+				margin-left:25px;
+				width:240px;
+			}
+			a.hier {
+				color: #e40620;
+				text-decoration: underline;
+			}
+			.tikkels-left {
+				margin-top: 0px;
+				margin-right: 55px;
+				float: right;
+			}
+			.tikkels-right {
+				margin-top: 0px;
+				margin-right: 55px;
+				float: right;
+			}
+			.faq-iframe {
+				width: 280px;
+				height:430px;
+				margin-left:25px;
+				
+			}
+			div#footer-faq{
+				position:relative;
+				margin-top:-15px;
+				margin-bottom:20px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-faq a:hover{
+				color:#fff;	
+			}
+
+
+			/* smaken */
+			div#contentBg-smaken{
+				width:100%;
+				background:url(../images/smaken-cont-bg.png) center 85px repeat-x,
+							url(../images/contentBgRepeat_tp-smaken.jpg) left -110px repeat-x;
+				float:left;
+				height:753px;
+				position:absolute;
+			}
+			div.content-smaken {
+				background: url(../images/smaken-cont-bg.png) center 85px no-repeat,
+							url(../images/contentBg_t.jpg) center top no-repeat;	
+				height:471px;
+				position:relative;
+			}
+
+			div.smaken {
+				
+				margin: 50px auto;
+			}
+			div.smaken h2 {
+				text-align: center;
+				margin-left:10px;
+				width:300px;
+			}
+			div.smaken p {
+				text-align: center;
+				width:300px;
+				margin-left:10px;
+				margin-bottom:0px;
+			}
+			.smaken_btn1 {
+				margin-top:30px;
+				margin-left:70px;
+			}
+			.smaken_btn2 {
+				margin:10px 0 0 95px;
+			}
+			.fb-smaken {
+				margin-top:0px;
+				margin-left:100px;
+			}
+			div#footer-smaken{
+				position:relative;
+				margin-top:90px;
+				text-align:center;
+				font-size:9px;
+				color:#474747;
+			}
+			div#footer-smaken a:hover{
+				color:#fff;	
+			}
+			.padding-smaken {
+				float:right;
+				margin:30px 20px 0 0px;
+			}
+			div.slider{
+				margin-top:0px;
+			}
+			ul#slider {
+				margin: 125px 0 100px 70px;
+				width:280px;
+			}
+			ul#slider li img {
+				height: 5em;
+			    width: 5em;
+			    margin-left:10px;
+			}
+			/*
+			.roundabout-moveable-item {
+				height: 5em;
+			    width: 5em;
+			    padding:;
+			}*/
+			a.prev{
+				position:absolute;
+				margin-left:50px;
+				margin-top:270px;
+				z-index:300;
+				
+			}
+			 a.next{
+			 	position:absolute;
+			 	margin-right:50px;
+			 	margin-top:270px;
+			 	z-index:300;
+			 }
+	}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+
+
+

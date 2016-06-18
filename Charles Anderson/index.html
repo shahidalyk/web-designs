@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Charles Anderson</title>
+<meta name="description" content="Platina - Modern Creative HTML Template"/>
+<meta name="keywords" content=""/>
+<!--META KEYWORDS-->
+<meta name="author" content="Vogue"/>
+<!--CSS FILES STARTS-->
+<link rel="shortcut icon" type="image/gif" href="images/favicon.gif"/>
+<link rel="stylesheet" id="skins-switcher" href="css/style.css" type="text/css" media="screen"/>
+<link href="css/orbit-slider.css" rel="stylesheet" type="text/css"/>
+<!--GOOGLE FONTS-->
+<!--CHOOSE WICH FONT YOU WANT TO USE AND DELETE THE REST FOR FASTER LOADING-->
+<link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+<!--GOOGLE FONTS-->
+<!--JS FILES STARTS-->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<!-- JQUERY -->
+<script type="text/javascript" src="js/custom.js"></script>
+<!-- CUSTOM JS -->
+<script type="text/javascript" src="js/easing/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/orbit-slider/jquery.orbit.js"></script>
+<script type="text/javascript" src="js/jquery.infieldlabel.min.js"></script>
+<script type="text/javascript">
+        
+$(document).ready(function() {
+	
+    $("#contact-form").submit(function() {
+        $('#load').append('<center><img src="ajax-loader.gif" alt="Currently Loading" id="loading" /></center>');
+
+        var fem = $(this).serialize(),
+			note = $('#note');
+	
+        $.ajax({
+            type: "POST",
+            url: "contact.php",
+            data: fem,
+            success: function(msg) {
+				if ( note.height() ) {			
+					note.slideUp(500, function() { $(this).hide(); });
+				} 
+				else note.hide();
+
+				$('#loading').fadeOut(300, function() {
+					$(this).remove();
+
+					// Message Sent? Show the 'Thank You' message and hide the form
+					result = (msg === 'OK') ? '<div class="success">Your message has been sent. Thank you!</div>' : msg;
+
+					var i = setInterval(function() {
+						if ( !note.is(':visible') ) {
+							note.html(result).slideDown(500);
+							clearInterval(i);
+						}
+					}, 40);    
+				}); // end loading image fadeOut
+            }
+        });
+
+        return false;
+    });
+});
+	$(document).ready(function() {
+	$(function(){ $('.label').inFieldLabels(); });
+});
+
+</script>
+</head>
+<div id="wrapper">
+	<div id="slideshow-bg">
+		<div class="center">
+			<p class="header-text-left">
+				<strong>EMAIL : getready@forevermoreindustries.info</strong>
+			</p>
+			<ul id="header-icons">
+				<li class="icon-facebook" title="Like Us on Facebook" id="social-01"><a href="#"></a></li>
+				<li class="icon-twitter" title="Follow Us om Twitter" id="social-02"><a href="#"></a></li>
+				<li class="icon-rss" title="Read Our RSS" id="social-06"><a href="#"></a></li>
+			</ul>
+			<div id="header-container">
+				<div id="header-bg-top">
+				</div>
+				<!--WRAPPER-->
+				<div id="header">
+					<h1 class="colored">Girl
+Gets Ring-Find Out How in the Video Below</h1>
+				</div>
+				<!-- HEADER ENDS-->
+				<!-- MAIN CONTAINER -->
+				<div id="orbit-slider">
+					<a href="#"><img src="images/slideshow/4.jpg" width="700" height="277" alt="" data-caption="#slidertitle1"/></a>
+					<a href="#"><img src="images/slideshow/2.jpg" width="700" height="277" alt="" data-caption="#slidertitle2"/></a>
+					<a href="#"><img src="images/slideshow/1.jpg" width="700" height="277" alt="" data-caption="#slidertitle3"/></a>
+					<a href="#"><img src="images/slideshow/slide-003.jpg" width="700" height="277" alt="" data-caption="#slidertitle4"/></a>
+				</div>
+				<!-- Captions for Orbit -->
+				
+			</div>
+		</div>
+	</div>
+	</div>
+	<div id="content-wrapper">
+		<div id="content">
+			<div class="one">
+				<div id="headline_container">
+					<div class="headline">
+						
+						<div class="headline_inner">
+							<h4><span class="colored">How to go from "Hello" to "I do"</span><br />
+							"Using an ultimatum to get that sought after wedding ring is like committing relationship suicide. If you feel the need to present your boyfriend with an ultimatum concerning your relationship, it MUST be authentic!" </h4>
+						</div>
+						<div class="headline_button">
+								<img src="images/ebook-pic.png"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="one another">
+				<ul class="round-list">
+					<li>Are You in a Relationship that seems to be stalled and not moving
+					forward?</li>
+					<li>Does your boyfriend keep promising he is going to marry you but will not
+					commit to a date?</li>
+					<li>Has your boyfriend given you an engagement ring but seems to be getting
+					cold feet as the date draws near?</li>
+					<li>Did you know there are certain words you can use with your boyfriend or
+					fiance that will make him value  you above all others?</li>
+					<li>All of the answers to these important questions are revealed in the
+					video.</li>
+					<li>The insights in this video have already helped thousands of women
+					seeking to be married.</li>
+					<li>Are you one of the millions of women who are in a relationship where
+					you feel frustrated with your guy because the relationship isn't moving
+					forward toward</li>
+					<li>Are you one of the millions of women in the dating scene who can't
+					seem to get their relationship off the launch pad?</li>
+					<li>Some of these women feel they'll never find the love they deserve or
+					start the family they want.</li>
+				</ul>
+				<h3 class="colored" style="margin-top:30px">Then watch this video that reveals
+				little known tips for getting your man to say  "I do."<br />
+				<a href="http://gratified1.girlring.hop.clickbank.net" target="_blank" class="colored">Click Here</a></h3>
+
+			</div>
+
+
+			<div class="line"></div>
+
+
+			<div class="one">
+				<div class="one-half">
+				<!-- form -->
+					 <form id="contact-form" method="post" action="javascript:alert('success!');window.open('http://gratified1.girlring.hop.clickbank.net'); ">
+            <div class="labels">
+              <p>
+                <label for="name">Name</label>
+                <br />
+                <input class="required inpt requiredd" type="text" name="name" id="name" value="" />
+              </p>
+              <p>
+                <label for="email">E-Mail</label>
+                <br />
+                <input class="required inpt requiredd" type="text" name="email" id="email" value="" />
+              </p>
+            </div>
+            <div class="comments">
+              <p>
+                <textarea class="textbox" name="message" rows="6" cols="30"></textarea>
+              </p>
+              <br />
+              <p>
+                <label for="answer">3+2=?</label>
+                <br />
+                <input class="required inpt requiredd" type="text" name="answer" id="answer" value="" />
+              </p>
+            </div>
+            <label id="load" style="display:none"></label>
+            <input id="submit-button" class="button big round purple" type="submit" name="submit" value="Send Message" />
+          </form>
+        <!-- End Form --> 
+				</div>
+				<div class="one-third">
+					<img src="images/Ebook Cover.jpg"  style="margin-left:50px;"/>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+	<div id="footer-bg">
+		<div id="footer-wrapper">
+			<div id="footer-container">
+				
+				<div id="copyright-wrapper">
+					<!-- COPYRIGHTS WRAPPER STARTS-->
+					<div id="copyright">
+						<a id="logo-copyright" title="Homepage" href="#"></a>
+						<div class="right">
+							<p>
+								<a href="#">Affiliated websites</a> / <a href="#">Feedback</a> / <a href="#">Videos</a> / <a href="#">Offers</a> / <a href="#">Blog</a> / <a href="#">Author &amp; Publisher</a> / <a href="#">Contact</a>
+							</p>
+							<span>&copy; Copyright 2012. All rights reserved.</span>
+						</div>
+					</div>
+					<!-- COPYRIGHTS ENDS-->
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- COPYRIGHTS WRAPPER ENDS-->
+</div>
+<script type="text/javascript">
+jQuery.noConflict()(function($) {
+	$(document).ready(function() {
+	$(function(){ $('label').inFieldLabels(); });
+});
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,298 @@
+/*-----------------------------------------------------------------------------------*/
+/*	0.	RESET
+/*-----------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent
+}
+body {
+	line-height:1
+}
+ol, ul {
+	list-style:none
+}
+blockquote, q {
+	quotes:none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content:'';
+	content:none
+}
+:focus {
+	outline:0
+}
+ins {
+	text-decoration:none
+}
+del {
+	text-decoration:line-through
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+.clear {
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+.clearfix:after {
+	clear:both;
+	content:' ';
+	display:block;
+	font-size:0;
+	line-height:0;
+	visibility:hidden;
+	width:0;
+	height:0
+}
+.clearfix {
+	display:inline-block
+}
+* html .clearfix {
+	height:1%
+}
+.clearfix {
+	display:block
+}
+/*-----------------------------------------------------------------------------------*/
+/*	1.	FONT-FACE
+/*-----------------------------------------------------------------------------------*/
+@font-face {
+	    font-family: 'meta-bold';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/meta-bold.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: bold;
+	    font-style: normal; }
+/*-----------------------------------------------------------------------------------*/
+/*	1.	GENERAL
+/*-----------------------------------------------------------------------------------*/
+
+body {  
+    margin:0%; padding:0%;  
+    background-color:#f6f8f6;  
+    margin: 0 auto;
+    font-size:100%;
+    background:url('../images/png/header-bg.png') repeat-x ;
+}  
+
+img {
+	max-width:100%;
+}
+
+
+#content {
+	
+}
+/*-----------------------------------------------------------------------------------*/
+/*	2. STYLES
+/*-----------------------------------------------------------------------------------*/
+
+.logo {
+	background:url('../images/png/logo-bg.png') no-repeat ;
+	width:61.25%;
+	/*height:149px;*/
+	padding-top:1.25em;
+}
+
+.divider {
+	background: transparent url('../images/png/line.png') no-repeat ;
+	height: 2px;
+	display: block;
+	margin: 0% 0 1em 0;
+}
+
+h3.tagline-1 {
+	font-family:'meta-bold';
+	font-size:2.3125em;
+	color:#3f6082;
+	padding: 0% 0 0 0 ;
+	letter-spacing: -0.0625em;
+}
+
+h4.tagline-2 {
+	font-family:'meta-bold';
+	font-size:0.8125em;
+	color:#538548;
+	margin: 0px 0 0 0 ;
+	letter-spacing: -0.25%;
+}
+
+a.button {
+	margin: 2.4375em 0 0 0 ;
+	color:white;
+	background: #83b76f; /* Old browsers */
+	background: -moz-linear-gradient(top, #83b76f 1%, #487a3e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#83b76f), color-stop(100%,#487a3e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #83b76f 1%,#487a3e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #83b76f 1%,#487a3e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #83b76f 1%,#487a3e 100%); /* IE10+ */
+	background: linear-gradient(top, #83b76f 1%,#487a3e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#83b76f', endColorstr='#487a3e',GradientType=0 ); /* IE6-9 */
+	  border: 1px solid #aaa;
+	  border-top: 1px solid #b7d631;
+	  border-left: 1px solid #ccc;
+	  -moz-border-radius: 6px;
+	  -webkit-border-radius: 6px;
+	  border-radius: 6px;
+	  display: inline-block;
+	  font-size: 0.875em;
+	  font-weight: bold;
+	  text-decoration: none;
+	  text-shadow: black -1px -1px 2px;
+	  cursor: pointer;
+	  margin-bottom: 1.25em;
+	  line-height: normal;
+	  padding: 0.5em 0.625em;
+	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;  }
+
+}
+
+a.button :hover {
+	background: #487a3e; /* Old browsers */
+	background: -moz-linear-gradient(top, #487a3e 0%, #83b76f 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#487a3e), color-stop(99%,#83b76f)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #487a3e 0%,#83b76f 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #487a3e 0%,#83b76f 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #487a3e 0%,#83b76f 99%); /* IE10+ */
+	background: linear-gradient(top, #487a3e 0%,#83b76f 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#487a3e', endColorstr='#83b76f',GradientType=0 ); /* IE6-9 */
+	border: 0.14993% solid #b7d631;
+	  border-top: 0.14993% solid #b7d631;
+	  border-left: 0.14993% solid #b7d631;
+}
+
+.header-pic {
+	margin: 0.4em 0 0 0 ;
+}
+
+div.six {
+	float:right;
+}
+
+h3.tagline-2 {
+	font-family:'meta-bold';
+	font-size:1.125em;
+	color:#538548;
+	margin: 0% 0 0 0 ;
+}
+
+ul.checklist li {
+	background:url('../images/png/tick.png') no-repeat ;
+	padding-left: 0%;
+	
+	font-weight:bold;
+}
+
+div.six a {
+	color: #3c5e80;
+	text-decoration:underline;
+	margin: 0% 0 0 0 ;
+}
+div.sixteen {
+	margin: 0% 0 0% 0 ;
+}
+div.sixteen p {
+	background:url('../images/png/content-bg.png') no-repeat center 3.25em;
+	color:#a2a2a2;
+	padding: 6.5em 0 6.5em 0 ;
+}
+
+div.seven {
+	float:left;
+}
+
+div.nine {
+	float:right;
+}
+
+div.list {
+	margin:-6.25em 0 0 0;
+}
+ul.checklist li {
+			padding-left:1.5em;
+		}
+
+
+
+
+
+
+
+
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {
+		div.list {
+			clear:both;
+		}
+		.header-pic  {
+			margin: -11em 0 0 23em;
+
+		}
+	}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {
+		body
+		{background:url('../images/png/header-bg3.png') repeat-x ;}
+		
+	}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+	}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {
+		.logo{margin:0 auto;
+		background:url('../images/png/logo-bg2.png') no-repeat ;
+		}
+		h3.tagline-1 {text-align:center;margin:0 auto;font-size:1.75em;}
+		h4.tagline-2 {text-align:center;margin:0 auto;line-height:1.3em;}
+		a.button{
+			position:absolute;
+			top:28em;
+			left:3.4em;
+			text-align:center;margin:0 auto;
+		}
+		.header-pic {margin:0 auto;}
+		div.list {margin-top:200px;}
+		body
+		{background:url('../images/png/header-bg2.png') repeat-x ;}
+		div.list {
+			
+			font-size:0.75em;
+			padding:3.125em 0 2.5em 0;
+		}
+		ul.checklist li {
+			padding-left:2em;
+		}
+		div.sixteen p {
+			background:none;
+			border-top:1px solid #d8d8d8;
+			font-size:0.75em;
+			padding: 1.5em 0 6.5em 0 ;
+		}
+		
+	}
+

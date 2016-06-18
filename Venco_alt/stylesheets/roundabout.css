@@ -1,0 +1,33 @@
+	#roundabout-holder{
+		width:535px;
+		height:420px;
+		margin-top:100px;
+		padding:0px 0 0 0;
+
+	}
+#roundabout{
+					
+					float:left;
+					width:800px;
+					height:420px;
+					margin-bottom: 0px;
+					overflow:hidden;
+					padding-top:0px;
+				
+					}
+
+.roundabout-holder	{
+					width:535px;
+					height:420px;
+					margin:0px auto 0 auto;
+					padding:0!important;
+					list-style:none;
+					}
+
+.roundabout-moveable-item {
+					width:243px;
+					height:414px;
+					display:block;
+					overflow:hidden;
+					padding:50px 0px 0 0;
+					}

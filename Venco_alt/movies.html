@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>.:: Tikkels ::.</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    
+    <!-- Fonts
+	================================================== -->
+    <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/jwplayer.js"></script>
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+	<script type="text/javascript"  src="js/MeganoOT-Regular_400-MeganoOT-Bold_700.font.js"></script>
+    <script type="text/javascript">      	
+		Cufon.replace('h2, nav ul li a', {hover: true});
+		$(window).resize(function() {
+		  	Cufon.refresh();
+		});		
+		
+
+/*
+		$.get('proxy.php?url=http://moviemaxonline.eu/rss/nieuw.rss', function (data) {
+		    $(data).find("entry").each(function () { // or "item" or whatever suits your feed
+		        var el = $(this);
+
+		        console.log("------------------------");
+		        console.log("title      : " + el.find("title").text());
+		        console.log("author     : " + el.find("author").text());
+		        console.log("description: " + el.find("description").text());
+		    });
+		});*/
+
+
+		/*
+		$.ajax({
+		  url      : document.location.protocol + '//ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=10&callback=?&q=' + encodeURIComponent('http://moviemaxonline.eu/rss/nieuw.rss'),
+		  dataType : 'json',
+		  success  : function (data) {
+		    if (data.responseData.feed && data.responseData.feed.entries) {
+		      $.each(data.responseData.feed.entries, function (i, e) {
+		        console.log("------------------------");
+		        console.log("title      : " + e.title);
+		        console.log("author     : " + e.author);
+		        console.log("description: " + e.description);
+		      });
+		    }
+		  }
+		});*/
+		//$('div.movies-left').rssfeed('http://moviemaxonline.eu/rss/nieuw.rss');
+
+				/*
+		*  How to load a feed via the Feeds API.
+		*/
+
+		google.load("feeds", "1");
+
+function initialize() {
+    var feed = new google.feeds.Feed("http://moviemaxonline.eu/rss/nieuw.rss");
+    feed.setResultFormat(google.feeds.Feed.XML_FORMAT);
+    feed.setNumEntries(1000);
+    feed.load(function(result) {
+
+        if (!result.error) {
+            var container = document.getElementById("feeds");
+            var text = "";
+            //var entry = result.feed.entries[i];
+		            // Get all items returned.
+		    var items = result.xmlDocument.getElementsByTagName('item');
+		    // Loop through our items
+		    for (var i = 0; i < items.length; i++) {
+		      var item = items[i];
+
+		   
+		      // Get the title from the element.  firstChild is the text node containing
+		      // the title, and nodeValue returns the value of it.
+
+		      //build each element
+			    //var Img = entry.content;
+			    //var img = document.createElement("img");
+				//img = item.getElementsByTagName('enclosure')[0].getAttribute('url');
+
+
+
+				var box = document.createElement("div");
+            	box.id="feed-box"
+            	
+            	
+
+
+
+
+				 var image=document.createElement("img");
+					 image.type="image/jpeg"
+					 image.src=item.getElementsByTagName('enclosure')[0].getAttribute('url');
+					 image.width=50
+					 image.height=75
+					 image.id="feed-image"
+				
+				
+		      	//var image = document.createElement("img");
+			  //  image = item.getElementsByTagName('enclosure')[0].firstChild.nodeValue;
+
+			    var title = document.createElement("h5");
+			    title.innerHTML=item.getElementsByTagName('title')[0].firstChild.nodeValue;
+			    title.id="feed-title"
+
+			    var category = document.createElement("h5");
+			    category.innerHTML=item.getElementsByTagName('category')[0].firstChild.nodeValue;
+			    category.id="feed-category"
+			    //href = item.getElementsByTagName('link')[0].firstChild.nodeValue;
+
+			    /*$(box).on('mouseover',function(){
+		      	  $(this).css('outline','2px solid #e40620');
+		      	  $(this > title).css('color','#ffed00');
+		      	  $(category).css('color','#ffffff');
+		      	}).on('mouseleave',function() {
+		      	  $(this).css('outline','');
+		      	  $(this > title).css('color','');
+		      	  $(category).css('color','');
+		      	});*/
+
+			  container.appendChild(box);
+			  box.appendChild(image); // Append the title to the page
+		      box.appendChild(title).appendChild(category); // Append the title to the page
+		     // box.appendChild(category); // Append the title to the page
+		      //box.appendChild(document.createElement('br')); // Add a new line
+
+		      
+
+
+		    /*  var page1 = 
+		      var page2 = 
+		      var page3 = 
+		      var page4 = 
+		      var page5 = 
+		      var page6 = 
+		      var page7 = 
+		      var page8 = 
+		      var page9 = */
+
+		    function myClosure(item){
+  				return function(){
+    		// display entry's video
+
+
+       		var container2 = document.getElementById("feeds2");
+
+       		/*var video=document.createElement("video");
+					 video.type="video/wmv"
+					 video.src=item.getElementsByTagName('enclosure')[1].getAttribute('url');
+					 video.width=480
+					 video.height=270
+					 video.id="feed-video"
+					 video.controls="controls"*/
+					
+			var video=document.createElement("video");
+			try
+			  {
+			  	if(item.getElementsByTagName('enclosure')[1].getAttribute('url')){
+					video.src=item.getElementsByTagName('enclosure')[1].getAttribute('url');
+				}
+			  }
+			catch(err)
+			  {
+			    txt="Video not available.\n\n";
+			    
+			  }
+			
+			
+				//video.src="video.mp4"
+				video.id="video"
+				video.width=460
+				video.height=270
+				video.type="video/wmv"
+				//video.innerHTML=item.getElementsByTagName('title')[0].firstChild.nodeValue;
+			
+
+			
+			var image2=document.createElement("img");
+				image2.type="image/jpeg"
+				image2.src=item.getElementsByTagName('enclosure')[0].getAttribute('url');
+				image2.width=100
+				image2.height=150
+				image2.id="feed-image2"
+
+			var title2 = document.createElement("h2");
+			    title2.innerHTML=item.getElementsByTagName('title')[0].firstChild.nodeValue;
+			    title2.id="feed-title2"	
+
+			var content = document.createElement("p");
+			    content.innerHTML=item.getElementsByTagName('description')[0].firstChild.nodeValue;
+			    content.id="feed-content"
+
+			container2.innerHTML=""
+
+			container2.appendChild(video);
+			container2.appendChild(image2);
+			container2.appendChild(title2); // Append the title to the page
+			container2.appendChild(content);
+
+			jwplayer("video").setup({
+				flashplayer: "js/player.swf",
+				
+			});
+		
+		}
+       }
+		      box.onclick = myClosure(item);
+		      
+
+		    }
+		    /*
+            for (var i = 0; i < result.feed.entries.length; i++) {
+                var entry = result.feed.entries[i];
+                text += "<a href='" + entry.link + "'>" + entry.title + "</a><br />" + entry.category + "<br /><br />";
+            }
+            container.innerHTML = text;*/
+        }
+    });
+}
+google.setOnLoadCallback(initialize);
+
+//$('.media').media();
+
+		
+				 // when the DOM is ready, convert the feed anchors into feed content 
+	   /*$(document).ready(function() { 
+	        $('a.feed').gFeed( { target: '#feeds', max: 12 } );
+        }); */
+       
+       
+	</script>
+
+</head>
+<body>
+
+
+
+	<!-- Primary Page Layout
+	================================================== -->
+
+	<!-- Delete everything in this .container and get started on your own site! -->
+
+<div class="container">
+		<div class="sixteen headerTop">
+			<a href="index.html"><div id="logo_tl"></div></a>
+            <div id="header_candy_tl"></div>
+			<nav>
+            	<ul>
+                	<li id="home"><a href="index.html"><div>HOME</div></a></li>
+                    <li id="topfilms"><a href="#" class="selected" ><div>NIEUWE TOPFILMS</div></a></li>
+                    <li id="smaken"><a href="smaken.html"><div>TIKKELS SMAKEN</div></a></li>
+                    <li id="faq"><a href="faq.html"><div>FAQ</div></a></li>
+                </ul>
+            </nav>			
+			
+		</div>
+</div><!-- container -->
+
+<div id="feed-cont">
+		<div class="container">
+        
+
+	        	<div id="feed" class="feed eight columns alpha">
+	        		<div id="feed-head">
+				    	<h2 class="feed-head">Gratis nieuwe topfilms kijken<br /> met Tikkels!</h2>
+				    	<img src="images/movieMax.png" class="feed-head-img" />
+				    	<br class="clear" />
+				    </div>
+	      			<div id="feeds"> 
+	      				
+					</div>
+					
+				</div>
+
+
+				<div id="feeds2" class="eight columns alpha">
+				
+
+				</div>
+				<div class="huur-btn"><a href="http://moviemaxonline.eu/" target="_blank"><img src="images/huur-btn.png" width="230" height="40" alt=""></a></div>  
+			
+		</div><!--end container-->
+
+</div><!-- container -->
+
+
+
+<div id="contentBg">
+        	<div class="container content">
+            	<div class="contentPacks">
+            		
+                	<div class="packs">
+                    	<div class="packsText">
+                	<h2 class="movies-left">Hoe werkt het gratis bestellen van een film?</h2>
+                    <p class="movies-left">Op de actieverpakkingen zit een sticker, lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra accumsan elit, in ultricies risus interdum at. Sed viverra interdum rhoncus. Morbi eget odio molestie nulla mollis consectetur et tincidunt est. Praesent mi ligula, dignissim quis scelerisque vitae, ultrices vitae lorem. Nam iaculis, ipsum nec aliquet mattis, urna magna venenatis magna, in dictum nunc orci porttitor augue.
+					Donec blandit, nibh ac ultrices eleifend, nisl magna feugiat ante, a posuere metus dolor eget enim. Nunc consequat mauris tristique risus molestie vel tristique odio eleifend. Nulla congue fringilla consectetur. Sed vestibulum magna sed eros posuere ullamcorper. Aliquam erat volutpat. Vestibulum euismod risus sed nisi vestibulum congue. Donec pharetra aliquam consequat.</p><div class="terms"><a href="Tikkels_feedback_Shahid.pdf" target="_blank"><img src="images/termsBtn.jpg" width="180" height="40" alt=""></a></div>
+                    
+                </div>
+                    </div>                
+                </div>
+              
+
+              <div class="contentPacks right">
+            		
+                	<div class="packs">
+                    	<div class="packsText">
+                	<h2 class="movies-left">Wil je één van de bovenstaande films gratis kijken? Koop dan een zak Tikkels!</h2>
+                    <div id="packImg"></div>
+
+                </div>
+                    </div>                
+                </div>
+              
+              <p class="right">Deel deze pagina via:<span><img src="images/sharingIcons.png" class="right" width="136" height="16" alt=""></span></p>
+              
+            </div>
+            <div id="footer">Copyright © 2012 <a href="http://www.leaf.nl/" target="_blank">Leaf Holland</a>. Alle rechten voorbehouden.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#" target="_blank">Cookiepolicy</a>.</div>
+</div>
+
+<script type="text/javascript">      	
+	
+		
+
+</script>	
+		
+		
+		        
+<!-- End Document
+================================================== -->
+</body>
+</html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
